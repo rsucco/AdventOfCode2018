@@ -14,8 +14,7 @@ grid = Array.new(1000){Array.new(1000, 0)}
 intact_claims = []
 f.each { |claim|
     # parse the claim string to figure out which squares it covers
-    claim_id = claim.split('#')[1].split(' @')[0].to_i
-    intact_claims << claim_id
+    intact_claims << claim_id = claim.split('#')[1].split(' @')[0].to_i
     x = claim.split('@ ')[1].split(',')[0].to_i
     y = claim.split(',')[1].split(':')[0].to_i
     width = claim.split(': ')[1].split('x')[0].to_i
